@@ -47,8 +47,7 @@ nav.navbar{
 }
 aside{
     padding: 30px 20px;
-    width:10%;
-    min-width:160px;
+    width:170px;
     background-color: $purple;
     height:calc(100vh - 110px);
     position:fixed;
@@ -82,10 +81,10 @@ main{
 }
 
 .content-container{
-    width:90%;
+    width:calc(100vw - 170px);
     position:fixed;
     flex-shrink: 2;
-    left:10%;
+    left:170px;
     bottom:0;
     height:calc(100vh - 110px);
     overflow-y: auto;;
@@ -114,9 +113,9 @@ main{
 
         }
     }
-    .row.flex-wrap.justify-content-between{
-        padding-left: 4.5rem;
-    }
+    // .row.flex-wrap.justify-content-between{
+    //     padding-left: 4.5rem;
+    // }
 }
 
 .card.dc-card{
