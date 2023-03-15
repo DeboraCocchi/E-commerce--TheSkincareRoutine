@@ -35,10 +35,29 @@
                         'message' => "Confermi l'eliminazione del profilo: $product->name ?",
                         'entity' => $product
                     ]) --}}
-                            <form action="{{ route('admin.products.destroy',$product)}}" method="POST" class="mt-2">
-                                @csrf
-                                @method('DELETE')
-                            <button type="submit" class="btn btn-warning delete-profile" title="delete"><i class="fa-solid fa-trash-can"></i>&nbsp; Elimina prodotto</button>
+
+                            <button type="button" class="btn btn-warning delete-profile mt-2" title="delete" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-solid fa-trash-can"></i>&nbsp; Elimina prodotto</button>
+
+                            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Conferma eliminazione prodotto</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p>Sei sicuro di voler eliminare il prodotto <span class="purple">{{$product->name}}</span>?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                                      <form action="{{ route('admin.products.destroy',$product)}}" method="POST" class="mt-2">
+                                        @csrf
+                                        @method('DELETE')
+                                      <button type="submit" class="btn btn-danger" title="delete">Conferma</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </form>
                     </div>
                 </div>

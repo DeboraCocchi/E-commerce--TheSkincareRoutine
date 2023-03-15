@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>The Skincare Routine</title>
+    <link rel="icon" type="image/png" href="/img/skincare-routine-logo.png">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -18,13 +19,7 @@
         <!-- Scripts -->
         @vite(['resources/scss/appVue.scss', 'resources/js/appVue.js'])
     </head>
-    <body class="font-sans text-gray-900 antialiased p-0">
-
-
-        <div id="app">
-
-        </div>
-
-
+    <body>
+        @yield('content')
     </body>
 </html>

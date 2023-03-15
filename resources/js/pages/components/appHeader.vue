@@ -23,10 +23,10 @@ export default {
                 <div class="col-8 navbar-links h-100">
                     <ul class="d-flex align-items-center justify-content-end h-100">
                         <li class="me-4">
-                            <a href="#about-us">Skincare Routine</a>
+                            <a href="/#about-us">The Skincare Routine</a>
                         </li>
                         <li>
-                            <a href="#shop" class="me-4">Shop</a>
+                            <a href="/#shop" class="me-4">Shop</a>
                         </li>
                         <li class="me-5"><a href="/login" id="login-button" >Accedi</a></li>
                         <li class="pink"> <router-link :to="{name:'cart'}"><i class="fa-solid fa-cart-shopping"></i>&nbsp;( {{store.cart.length}} )</router-link></li>

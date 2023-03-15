@@ -40,7 +40,7 @@ export default {
                           <h5><strong>{{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}}</strong></h5>
                           <p style="font-size:0.8rem">Cod. prodotto:<br>{{product.code}}</p>
                       </div>
-                      <p class="card-text">{{product.description.substr(0,60)}}...</p>
+                      <p class="card-text">{{product.description}}</p>
                       <button class="btn btn-dark my-button align-self-end"
                       @click="addToCart(product)"><i class="fa-solid fa-cart-plus me-2"></i>Aggiungi</button>
             </div>

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('guest.home');
 });
 
 Route::middleware(['auth', 'verified'])
@@ -34,4 +34,12 @@ Route::middleware('auth')->group(function () {
 
 
 
+// Route::get('/{vue_capture?}', function () {
+//     return view('layouts.guest');
+// })->where('vue_capture', '[\/\w\.-]*');
+
 require __DIR__.'/auth.php';
+
+Route::get('{any?}', function () {
+    return view('guest.home');
+})->where('any', '.*')->name('home');

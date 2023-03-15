@@ -1,17 +1,17 @@
 <section class="space-y-6">
     <header>
-        <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Delete Account') }}
+        <h2 class="text-lg font-medium text-900 darkpurple">
+            {{ __('Cancella Account') }}
         </h2>
 
-        <p class="mt-1 text-sm text-gray-600">
-            {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
+        <p class="mt-1 text-sm text-black-600">
+            {{ __('Una volta cancellato il tuo account, tutte le risorse e i dati a esso associati verranno cancellati in modo permanente e non potranno più essere recuperati. Prima di procedere con la cancellazione, assicurati di salvare i dati importanti da conservare.') }}
         </p>
     </header>
 
     <!-- Modal trigger button -->
     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete-account">
-        {{__('Delete Account')}}
+        {{__('Cancella Account')}}
     </button>
 
     <!-- Modal Body -->
@@ -52,7 +52,7 @@
 
 
                             <button type="submit" class="btn btn-danger">
-                                {{ __('Delete Account') }}
+                                {{ __('Cancella Account') }}
                             </button>
                             <!--  -->
                         </div>

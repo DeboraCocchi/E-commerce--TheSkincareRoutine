@@ -8,7 +8,7 @@ export default {
         <div class="container-fluid h-100">
             <div class="row h-100">
                 <div class="col-6 h-100 text-center p-3"><img src="/img/logo-no-round.png" alt="logo-skincare-routine" class="header-logo"></div>
-                <div class="col-3 p-3">
+                <div class="col-3 p-3 text-center">
                     <h6 class="purple">THE SKINCARE ROUTINE</h6>
                     <p>Via delle Rose, 10<br>Quartiere San Giorgio<br>00144 Roma, Italia</p>
                 </div>

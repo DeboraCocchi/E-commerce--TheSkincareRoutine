@@ -54,7 +54,7 @@ class ProductController extends Controller
         $new_product->fill($form_data);
         $new_product->save();
 
-        return redirect()->route('admin.products.show',$new_product);
+        return redirect()->route('admin.products.show');
     }
 
     /**

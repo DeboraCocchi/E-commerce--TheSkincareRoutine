@@ -24,6 +24,14 @@ export default {
                 store.total += rowValue;
             }
         },
+        removeElement(){
+            let myRemoveBtns = document.getElementsByClassName('remove-item');
+            for(let i=0;i<myRemoveBtns.length;i++){
+                myRemoveBtns[i].addEventListener('click', function(){
+                    store.cart.splice(i,1)
+                })
+            }
+        },
         emptyCart(){
                 store.cart=[];
                 console.log(store.cart);
@@ -50,16 +58,20 @@ export default {
                 <table class="table">
                     <thead>
                         <tr>
+                        <th scope="col">Immagine</th>
                         <th scope="col">Prodotto</th>
                         <th scope="col">Prezzo</th>
                         <th scope="col">Quantità</th>
+                        <th scope="col">Azioni</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="product in store.cart" :key="product.id" :product="product">
+                            <td><img :src="product.image" alt="{{product.name}}" class="thumb-image"></td>
                             <td>{{product.name}} - {{product.brand}}</td>
                             <td><p class="price">{{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}}</p></td>
                             <td><input type="number" min="1" class="quantity" value="1" @change="updateTotal()"></td>
+                            <td><button class="btn btn-warning remove-item" @click="removeElement()">Rimuovi</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -89,63 +101,28 @@ export default {
 <style lang="scss" scoped>
     section.cart{
         background-color: #ffd6e2;
-        height:calc(100vh - 150px);
-        padding-top:160px;
+        padding:160px 0 30px;
+        min-height:calc(100vh - 150px);
         .cart-card{
             background-color:white;
             border-radius: 0.8rem;
             box-shadow:4px 4px 6px #555;
             margin:0 auto;
-            height:500px;
             width:70%;
             overflow: hidden ;
             .cart-table-container{
                 overflow-y:auto;
             }
         }
-        .cart-header {
-    font-weight: bold;
-    font-size: 1.25em;
-    color: #333;
-}
+        .thumb-image{
+            height:90%;
+            aspect-ratio: 1 / 1;
+            max-height: 60px;;
+            object-fit: cover;
 
-.cart-column {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid black;
-    margin-right: 1.5em;
-    padding-bottom: 10px;
-    margin-top: 10px;
-}
-
-.cart-row {
-    display: flex;
-}
-
-.cart-item {
-    width: 45%;
-}
-
-.cart-price {
-    width: 20%;
-    font-size: 1.2em;
-    color: #333;
-}
-
-.cart-quantity {
-    width: 35%;
-}
-
-.cart-item-title {
-    color: #333;
-    margin-left: .5em;
-    font-size: 1.2em;
-}
-
-.cart-item-image {
-    width: 75px;
-    height: auto;
-    border-radius: 10px;
-}
+        }
+        table tbody{
+            overflow-y:auto;
+        }
     }
 </style>

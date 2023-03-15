@@ -48,7 +48,7 @@ export default {
                                     <div class="img-container">
                                         <img src="/img/beauty.png" alt="beauty">
                                     </div>
-                                    <p class="mt-3 text-center">Scopri le tendenze più recenti e i prodotti essenziali per la cura della pelle, tutti disponibili solo da noi. Consegna veloce e gratuita su ordini superiori a $50. <br>Entra nel nostro mondo di bellezza e lasciati ispirare!</p>
+                                    <p class="mt-3 text-center">Scopri le tendenze più recenti e i prodotti essenziali per la cura del corpo, tutti disponibili solo da noi. <br>Entra nel nostro mondo di bellezza e lasciati ispirare! Consegna veloce e gratuita su ordini superiori a $50. </p>
 
                                 </div>
 
